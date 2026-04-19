@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine Vision Pi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <h1>Machine Vision Pi</h1>
+  <nav>
+    <a href="{{ url_for('web.dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('web.teach') }}">Teach</a>
+    <a href="{{ url_for('web.recipes') }}">Recipes</a>
+    <a href="{{ url_for('web.logs') }}">Logs</a>
+    <a href="{{ url_for('web.io_page') }}">I/O</a>
+    <a href="{{ url_for('web.settings') }}">Settings</a>
+  </nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

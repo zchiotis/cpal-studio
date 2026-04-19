@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+.env
+*.db
+data/logs/*.log
+data/snapshots/*.jpg
+data/templates/*.png

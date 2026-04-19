@@ -1,0 +1,49 @@
+{
+  "name": "default_recipe",
+  "description": "Example 2-slot pick set",
+  "camera": {
+    "resolution": [640, 480],
+    "framerate": 20,
+    "exposure_locked": false,
+    "awb_locked": false,
+    "analogue_gain": null,
+    "exposure_time": null
+  },
+  "gpio": {
+    "pick_ok_pin": 17,
+    "error_pin": 27,
+    "busy_pin": 22,
+    "pick_ok_pulse_ms": 200,
+    "active_high": true
+  },
+  "stable_frames_required": 4,
+  "inspection_zone": [50, 50, 540, 380],
+  "slots": [
+    {
+      "slot_id": "slot_1",
+      "label": "Left Product",
+      "roi": [110, 120, 130, 130],
+      "expected_center": [175, 185],
+      "position_tolerance_px": 12,
+      "presence_threshold": 0.55,
+      "orientation_threshold": 0.20,
+      "orientation_mode": "moments",
+      "inspection_mode": "presence_position_orientation",
+      "required": true,
+      "template_path": "default_recipe_slot_1.png"
+    },
+    {
+      "slot_id": "slot_2",
+      "label": "Right Product",
+      "roi": [340, 125, 130, 130],
+      "expected_center": [405, 190],
+      "position_tolerance_px": 12,
+      "presence_threshold": 0.55,
+      "orientation_threshold": 0.20,
+      "orientation_mode": "moments",
+      "inspection_mode": "presence_position_orientation",
+      "required": true,
+      "template_path": "default_recipe_slot_2.png"
+    }
+  ]
+}

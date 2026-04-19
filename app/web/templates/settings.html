@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Settings</h2>
+<form method="post">
+  <label><input type="checkbox" name="enabled" {% if config.inspection.enabled %}checked{% endif %}> Inspection Enabled</label><br>
+  <label><input type="checkbox" name="save_fail_snapshots" {% if config.inspection.save_fail_snapshots %}checked{% endif %}> Save fail snapshots</label><br>
+  <button type="submit">Save Settings</button>
+</form>
+<pre>{{ config | tojson(indent=2) }}</pre>
+{% endblock %}

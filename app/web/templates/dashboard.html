@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="grid">
+  <article>
+    <h2>System State: <span id="system-state">{{ system_state }}</span></h2>
+    <p>Active recipe: <strong id="recipe-name">{{ recipe or 'none' }}</strong></p>
+    <button onclick="postAction('/api/arm')">Arm</button>
+    <button onclick="postAction('/api/disarm')">Disarm</button>
+  </article>
+  <article>
+    <h2>Live View</h2>
+    <img class="stream" src="{{ url_for('web.stream') }}" alt="Live stream">
+  </article>
+</section>
+<section>
+  <h2>Last Result</h2>
+  <pre id="result-json">{{ last_result | tojson(indent=2) if last_result else 'No data yet' }}</pre>
+</section>
+{% endblock %}
