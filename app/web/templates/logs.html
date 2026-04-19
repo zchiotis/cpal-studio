@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Inspection Logs</h2>
+<table>
+  <thead><tr><th>Timestamp</th><th>Recipe</th><th>Final Result</th><th>Payload</th></tr></thead>
+  <tbody>
+  {% for row in rows %}
+  <tr>
+    <td>{{ row.timestamp }}</td>
+    <td>{{ row.recipe_name }}</td>
+    <td>{{ 'PASS' if row.final_result else 'FAIL' }}</td>
+    <td><code>{{ row.payload }}</code></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

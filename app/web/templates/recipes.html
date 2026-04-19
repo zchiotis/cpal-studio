@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Recipes</h2>
+<form method="post">
+  <label>Set Active Recipe
+    <select name="recipe_name">
+      {% for recipe in recipes %}
+      <option value="{{ recipe.name }}" {% if active_recipe == recipe.name %}selected{% endif %}>{{ recipe.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <button type="submit">Activate</button>
+</form>
+<ul>
+  {% for recipe in recipes %}
+  <li>
+    <a href="{{ url_for('web.recipe_edit', name=recipe.name) }}">{{ recipe.name }}</a> - {{ recipe.description }}
+    <form action="{{ url_for('web.delete_recipe', name=recipe.name) }}" method="post" class="inline"><button>Delete</button></form>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

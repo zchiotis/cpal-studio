@@ -1,0 +1,38 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 5000,
+    "debug": false
+  },
+  "camera": {
+    "resolution": [640, 480],
+    "framerate": 20,
+    "exposure_locked": false,
+    "awb_locked": false,
+    "analogue_gain": null,
+    "exposure_time": null
+  },
+  "inspection": {
+    "enabled": true,
+    "active_recipe": "default_recipe",
+    "stable_frames_required": 5,
+    "inspection_zone": null,
+    "save_fail_snapshots": true
+  },
+  "gpio": {
+    "enabled": true,
+    "pick_ok_pin": 17,
+    "error_pin": 27,
+    "busy_pin": 22,
+    "pick_ok_pulse_ms": 200,
+    "active_high": true
+  },
+  "paths": {
+    "db": "data/vision.db",
+    "recipes": "data/recipes",
+    "templates": "data/templates",
+    "calibration": "data/calibration",
+    "snapshots": "data/snapshots",
+    "logs": "data/logs"
+  }
+}

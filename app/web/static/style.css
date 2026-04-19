@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f9; }
+header { background: #0c223a; color: #fff; padding: 12px; }
+nav a { color: #fff; margin-right: 10px; text-decoration: none; }
+main { padding: 16px; }
+.grid { display: grid; grid-template-columns: 320px 1fr; gap: 16px; }
+article { background: #fff; border-radius: 8px; padding: 12px; }
+.stream { width: 100%; max-width: 800px; border: 1px solid #ccc; }
+pre { background: #111; color: #9df; padding: 10px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 6px; font-size: 12px; }
+.inline { display: inline; margin-left: 8px; }
+.teach-layout { position: relative; width: fit-content; }
+#roi-canvas { position: absolute; left: 0; top: 0; }

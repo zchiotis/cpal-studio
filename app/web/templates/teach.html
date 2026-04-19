@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Teach Mode</h2>
+<p>Draw ROIs over live stream and save recipe as JSON.</p>
+<div class="teach-layout">
+  <img id="teach-stream" class="stream" src="{{ url_for('web.stream') }}" alt="Teach stream">
+  <canvas id="roi-canvas"></canvas>
+</div>
+<form id="teach-form">
+  <label>Recipe Name <input name="name" value="recipe_new"></label>
+  <label>Description <input name="description" value=""></label>
+  <button type="button" onclick="saveTeachRecipe()">Save Recipe + Templates</button>
+</form>
+<p>Existing recipes: {{ recipe_names | join(', ') }}</p>
+{% endblock %}
